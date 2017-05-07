@@ -18,7 +18,7 @@ server.emit('request', {from: "Второй клиент"})*/
 var EventEmitter = require('events').EventEmitter;
 
 var db = new EventEmitter();
-//db.setMaxListeners(0); //убираем лимит(состоит из 10 обработок)
+db.setMaxListeners(0); //убираем лимит(состоит из 10 обработок)
 
 function Request(){
     var self = this;
