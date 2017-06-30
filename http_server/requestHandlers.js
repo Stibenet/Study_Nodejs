@@ -2,7 +2,7 @@ var querystring = require("querystring");
 
 function start(res, postData){
     console.log("Request handler 'start' was called.");
-    
+
     var body = '<html>'+
         '<head>'+
         '<meta http-equiv="Content-Type" content="text/html; '+
@@ -15,8 +15,7 @@ function start(res, postData){
         '</form>'+
         '</body>'+
         '</html>';
-    
-    
+
         res.writeHead(200, {"Content-Type": "text/html"});
         res.write(body);
         res.end();
